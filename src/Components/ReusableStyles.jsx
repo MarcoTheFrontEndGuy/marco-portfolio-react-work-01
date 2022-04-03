@@ -1,9 +1,7 @@
 import React from 'react'
 
-const ReusableStyles = () => {
+export default function ReusableStyles() {
   return (
     <div>ReusableStyles</div>
   )
 }
-
-export default ReusableStyles

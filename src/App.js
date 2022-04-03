@@ -9,7 +9,7 @@ import ReusableStyles from './Components/ReusableStyles'
 import Transfers from './Components/Transfers'
 import FAQ from './Components/FAQ'
 
-const App = () => {
+export default function App() {
   return (
     <Div>
       <SideBar />
@@ -20,12 +20,7 @@ const App = () => {
       <ReusableStyles />
       <Transfers />
       <FAQ /> */}
-
     </Div>
   )
 }
 const Div = styled.div``;
-
-
-
-export default App
