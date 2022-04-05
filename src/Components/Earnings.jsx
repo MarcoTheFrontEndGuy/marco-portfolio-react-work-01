@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { AreaChart, Area, Tooltip, ResponsiveContainer } from 'recharts'
 import { cardStyle } from './ReusableStyles'
 
+
+
 const data = [
   { data: 4500 },
   {
@@ -159,7 +161,7 @@ const data = [
   },
 ];
 
-
+   
 export default function Earnings() {
   return (
     <Section>
@@ -187,7 +189,7 @@ export default function Earnings() {
               type="monotone"
               dataKey="data"
               stroke="#ffc107"
-              fill="#806233e"
+              fill="#80683233e"
               strokeWidth={4}
             />
           </AreaChart>
@@ -204,6 +206,14 @@ const Section = styled.section`
   min-height: 20rem;
   ${cardStyle}
   padding: 2rem 0 0 0;
+  /* .chart {
+    height: 70%;
+    .recharts-default-tooltip {
+      background-color: black !important;
+      border-color: black !important;
+    }
+  } */
+  
   .top {
     .info {
       display: flex;
@@ -232,7 +242,7 @@ const Section = styled.section`
   }
   .chart {
     height: 70%;
-    .recharts-default-tooptip {
+    .recharts-default-tooltip {
       background-color: black !important;
       border-color: black !important;
     }

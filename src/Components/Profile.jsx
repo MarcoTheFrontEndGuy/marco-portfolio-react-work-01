@@ -55,7 +55,7 @@ const Section = styled.section`
         transform: scale(1.1);
       }
     }
-}
+} 
 .title {
   text-align: center;
   h2,

@@ -5,4 +5,4 @@ export const cardStyle = css`
   border-radius: 1rem;
   background-color: #212121;
   color: white;
-`
+`;

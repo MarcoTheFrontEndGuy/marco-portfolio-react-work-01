@@ -5,8 +5,6 @@ import { BsFillCalendar2WeekFill } from 'react-icons/bs'
 import { IoStatsChart } from 'react-icons/io5'
 import { BiGroup } from 'react-icons/bi'
 import { FiActivity } from 'react-icons/fi'
-
-
 export default function Analytics() {
   return (
     <Section>
@@ -19,7 +17,6 @@ export default function Analytics() {
           <BsFillCalendar2WeekFill />
         </div>
       </div>
-
       <div className="analytic">
         <div className="logo">
           <IoStatsChart />
@@ -29,7 +26,6 @@ export default function Analytics() {
           <h2>$350.40</h2>
         </div>
       </div>
-
       <div className="analytic">
         <div className="logo">
           <BiGroup />
@@ -39,7 +35,6 @@ export default function Analytics() {
           <h2>321</h2>
         </div>
       </div>
-
       <div className="analytic">
         <div className="content">
           <h5>Activity</h5>
@@ -49,11 +44,9 @@ export default function Analytics() {
           <FiActivity />
         </div>
       </div>
-
     </Section>
-  )
+  );
 }
-
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -84,6 +77,5 @@ const Section = styled.section`
         font-size: 1.5rem;
       }
     }
-
   }
 `;
