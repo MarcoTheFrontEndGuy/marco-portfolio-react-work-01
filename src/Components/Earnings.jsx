@@ -1,10 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import { AreaChart, Area, Tooltip, ResponsiveContainer } from 'recharts'
-import { cardStyle } from './ReusableStyles'
-
-
-
+import React from "react";
+import styled from "styled-components";
+import { AreaChart, Area, Tooltip, ResponsiveContainer } from "recharts";
+import { cardStyle } from "./ReusableStyles";
 const data = [
   { data: 4500 },
   {
@@ -160,14 +157,12 @@ const data = [
     data: 8000,
   },
 ];
-
-   
 export default function Earnings() {
   return (
     <Section>
       <div className="top">
         <div className="info">
-          <h4>This month earnings</h4>
+          <h5>This month earnings</h5>
           <h1>$682.5</h1>
           <div className="growth">
             <span>+2.45%</span>
@@ -175,30 +170,29 @@ export default function Earnings() {
         </div>
       </div>
       <div className="chart">
-        <ResponsiveContainer height="100%" width="100%" >
-          <AreaChart 
-            width={500} 
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart
+            width={500}
             height={400}
             data={data}
-            margin={{top: 0, left: 0, right: 0, bottom: 0 }}
+            margin={{ top: 0, left: 0, right: 0, bottom: 0 }}
           >
             <Tooltip cursor={false} />
-            <Area 
+            <Area
               animationBegin={800}
               animationDuration={2000}
               type="monotone"
               dataKey="data"
               stroke="#ffc107"
-              fill="#80683233e"
+              fill="#8068233e"
               strokeWidth={4}
             />
           </AreaChart>
         </ResponsiveContainer>
       </div>
     </Section>
-  )
+  );
 }
-
 const Section = styled.section`
   display: flex;
   flex-direction: column;
@@ -206,20 +200,12 @@ const Section = styled.section`
   min-height: 20rem;
   ${cardStyle}
   padding: 2rem 0 0 0;
-  /* .chart {
-    height: 70%;
-    .recharts-default-tooltip {
-      background-color: black !important;
-      border-color: black !important;
-    }
-  } */
-  
   .top {
     .info {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.2rem;
       h1 {
         font-size: 2rem;
       }
@@ -247,4 +233,5 @@ const Section = styled.section`
       border-color: black !important;
     }
   }
+
 `;

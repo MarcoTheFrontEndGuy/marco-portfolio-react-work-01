@@ -18,7 +18,6 @@ export default function FAQ() {
     },
     {
       icon: <IoMdCash />,
-      // icon: <IoCashOutline />,
       text: "Withdrawing money through an ATM",
     },
   ];
@@ -76,6 +75,11 @@ const Section = styled.section`
         border-bottom: 0.01rem solid #6c6e6e;
         padding: 0.8rem 0;
       }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    svg {
+      font-size: 2rem;
     }
   }
 `;

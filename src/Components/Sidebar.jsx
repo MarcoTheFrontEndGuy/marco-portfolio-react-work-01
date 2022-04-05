@@ -11,7 +11,7 @@ import { IoSettings } from "react-icons/io5";
 import { FiLogOut } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
-
+import scrollreveal from 'scrollreveal';
 
 export default function Sidebar() {
   const [currentLink, setCurrentLink] = useState(1);
@@ -19,6 +19,27 @@ export default function Sidebar() {
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
 
+  useEffect(() => {
+    const src = scrollreveal({
+      origin: "left",
+      distance: "80px",
+      duration: 2000,
+      reset: false,
+    });
+    src.reveal(`
+      .brand,
+      .links>ul>li:nth-of-type(1),
+      .links>ul>li:nth-of-type(2),
+      .links>ul>li:nth-of-type(3),
+      .links>ul>li:nth-of-type(4),
+      .links>ul>li:nth-of-type(5),
+      .links>ul>li:nth-of-type(6),
+      .logout
+    `,{
+      opacity: 0,  
+      interval: 300
+    });
+  }, []);
   return (
     <>
     <Section>
@@ -237,7 +258,6 @@ gap: 2rem;
     .toggle {
       display: block;
       color: white;
-      /* z-index: 10; */
       z-index: 99;
       svg {
         font-size: 1.4rem;
@@ -260,39 +280,14 @@ const ResponsiveNav = styled.nav`
   position: fixed;
   right: -10vw;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   background-color: black;
   height: 100vh;
-  /* height: 100%; */
-  width: ${({ state }) => (state ? "60%" : "0%")};
-  width: 100vw;
+  width: ${( state ) => (state ? "60%" : "0%")};
   opacity: 0;
   visibility: hidden;
   padding: 1rem;
 
-
-
-  /* #####################################################  */
-  /* #####################################################  */
-
-    /* position: fixed; */
-    /* right: -10vw; */
-    /* top: 0; */
-    /* z-index: 10; */
-    /* background-color: black; */
-    /* height: 100%; */
-    /* opacity: 0; */
-    /* visibility: hidden; */
-    /* visibility: visible; */
-    /* padding: 1rem; */
-
-  /* #####################################################  */
-  /* #####################################################  */
-  /* #####################################################  */
-  /* .show {
-    visibility: visible;
-    background-color: red;
-  } */
   .responsive__links {
    
     ul {
@@ -307,7 +302,7 @@ const ResponsiveNav = styled.nav`
         &:hover {
           background-color: #ffc107;
           a {
-            color: #000;
+            color: black;
           }
         }
         a {
@@ -324,9 +319,5 @@ const ResponsiveNav = styled.nav`
         }
       }
     }
-    .top > .links,
-  .logout {
-    /* display: block; */
-  }
   }
 `;

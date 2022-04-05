@@ -64,9 +64,7 @@ const Nav = styled.nav`
       h1 {
         span {
           display: block;
-
           margin: 1rem 0;
-          /* letter-spacing: 0; */
         }
       }
     }

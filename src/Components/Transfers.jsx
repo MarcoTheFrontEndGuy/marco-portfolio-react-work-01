@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import avatarImage from '../assets/avatarImage.jpeg'
-// import avatarImage from '../assets/avatarImage.jpg'
 import { cardStyle } from './ReusableStyles'
 
 export default function Transfers() {
@@ -134,4 +133,13 @@ const Section = styled.section`
     }
   }
   /* end .view  */
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .transactions {
+      .transaction {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
 `;
